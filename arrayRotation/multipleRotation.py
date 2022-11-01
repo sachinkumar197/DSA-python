@@ -7,6 +7,7 @@ def reverse_array(x):
 
 
 def rotateArray(x, d):
+    d = d % len(x)
     x = reverse_array(x)
     left_array = reverse_array(x[:-d])
     right_array = reverse_array(x[-d:])
