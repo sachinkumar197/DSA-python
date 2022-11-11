@@ -13,4 +13,4 @@ def split_array(i, j, ls, key):
 
 # xs = [1, 2, 3, 4, 5, 0]
 xs = list(range(15))
-print(split_array(0, len(xs), xs, 40))
+print(split_array(0, len(xs), xs, 4))
