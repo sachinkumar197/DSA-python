@@ -12,6 +12,14 @@ def searchElem(i, j, ls, key):
         return searchElem(mid + 1, j, ls, key)
 
 
-# xs = [1, 2, 3, 4, 5, 0]
-xs = list(range(15))
-print(searchElem(0, len(xs), xs, 4))
+def deleteElem(xs, d):
+    _index = searchElem(0, len(xs) - 1, xs, d)
+    if _index != -1:
+        for i in range(_index, len(xs) - 1):
+            xs[i] = xs[i + 1]
+        return xs[:len(xs) - 1]
+    return xs
+
+
+x = list(range(7))
+print(deleteElem(x, 5))
