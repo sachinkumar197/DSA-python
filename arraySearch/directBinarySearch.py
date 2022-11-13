@@ -1,3 +1,5 @@
+# https://www.geeksforgeeks.org/search-insert-and-delete-in-a-sorted-array/?ref=lbp
+
 def split_array(i, j, ls, key):
     mid = (i + j) // 2
     print("i,j,mid", i, j, mid, ls[mid])
