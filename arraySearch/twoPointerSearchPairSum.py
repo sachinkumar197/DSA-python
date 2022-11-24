@@ -2,12 +2,14 @@
 
 def searchElem(xs, left, right, val):
     xs.sort()
-    if xs[left] + xs[right] == val:
+    if left >= right:
+        return "No"
+    elif xs[left] + xs[right] == val:
         return "Yes"
     elif xs[left] + xs[right] > val:
         return searchElem(xs, left, right - 1, val)
     elif xs[left] + xs[right] < val:
-        return searchElem(xs, left - 1, right, val)
+        return searchElem(xs, left + 1, right, val)
     return "No"
 
 
